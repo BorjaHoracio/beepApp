@@ -11,7 +11,7 @@ export default function PrimaryBtn (props) {
 	return (
 		<TouchableOpacity
 			onPress={props.onPress}
-			activeOpacity={0.6}
+			activeOpacity={0.8}
 		>
 			<View style={[styles.button, styles.centerObjects]}>
 				<CustomText 

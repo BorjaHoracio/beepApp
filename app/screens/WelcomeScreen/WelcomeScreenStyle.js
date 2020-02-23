@@ -12,7 +12,7 @@ export default StyleSheet.create({
 		backgroundColor: Colors.lightPurple,
 		borderRadius: Metrics.screenWidth * 0.6,
 		left: -Metrics.screenWidth * 0.4,
-		top: -Metrics.screenWidth * 0.35,
+		top: -Metrics.screenWidth * 0.5,
 		position: 'absolute'
 	},
 	circleRight: {
@@ -20,7 +20,7 @@ export default StyleSheet.create({
 		height: Metrics.screenWidth * 1.1,
 		backgroundColor: Colors.lightPurple,
 		borderRadius: Metrics.screenWidth * 0.55,
-		top: -Metrics.screenWidth * 0.4,
+		top: -Metrics.screenWidth * 0.5,
 		right: -Metrics.screenWidth * 0.6,
 		position: 'absolute'
 	},
@@ -40,6 +40,6 @@ export default StyleSheet.create({
 		color: Colors.purple,
 	},
 	content: {
-		marginTop: Metrics.screenWidth * 0.8
+		marginTop: Metrics.screenWidth * 0.65
 	}
 });

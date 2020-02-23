@@ -32,7 +32,7 @@ const ApplicationStyles = {
 			shadowRadius: 4,
 			shadowOpacity: 0.1,
 			shadowOffset: { width: 0, height: 3 },
-			elevation: 1,
+			elevation: 3,
 			borderRadius: 5,
 		},
 		absolute: {
@@ -64,11 +64,11 @@ const ApplicationStyles = {
 			zIndex: 9999
 		},
 		bottomViewHeight: {
-			height: 64
+			height: 84
 			//height 64 + 16margin
 		},
 		buttonBottom: {
-		bottom: 40
+		bottom: 20
 	}
 	},
 	margins: {

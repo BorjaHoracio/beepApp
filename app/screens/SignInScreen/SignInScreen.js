@@ -9,7 +9,7 @@ import CustomText from 'beep/app/components/CustomText';
 import PrimaryBtn from 'beep/app/components/PrimaryBtn';
 
 export default function SignInScreen (props) {
-	const [text, setText] = useState('');
+	const [text, setText] = useState('Loquillo');
 
 	return (
 		<TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
@@ -29,7 +29,7 @@ export default function SignInScreen (props) {
 					</View>
 					<View style={styles.baseTopMargin}>
 						<CustomText
-							text='Tu nombre de usuario'
+							text= {'Tu nombre de usuario'}
 							weight='bold'
 							size='subtitle'
 						/>
@@ -39,11 +39,12 @@ export default function SignInScreen (props) {
 						onChangeText={(text) => setText(text)}
 						placeholder='Escribe tu nombre'
 						style={styles.textInput}
+						onSubmitEditing={() =>props.navigation.navigate('HomeScreen', {text})}
 					/>
 				</View>
-				<View style={[styles.buttonBottom, styles.baseHorizontalMargin]}>
+				<View style={[styles.buttonBottom]}>
 					<PrimaryBtn
-						onPress={() => props.navigation.navigate('SignInScreen')}
+						onPress={() => props.navigation.navigate('HomeScreen', {text})}
 						text='COMENZAR'
 					/>
 				</View>

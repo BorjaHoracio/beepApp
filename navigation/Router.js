@@ -8,7 +8,7 @@ import HomeScreen from 'beep/app/screens/HomeScreen';
 
 const Stack = createStackNavigator();
 const ScreenOptions = {
-
+    headerShown: false
 };
 export default function Navigation(){
     const containerRef = useRef(null);
@@ -16,10 +16,10 @@ export default function Navigation(){
     return(
         <NavigationContainer>
             {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-            <Stack.Navigator initialRouteName="Welcome">
-                <Stack.Screen name="Welcome" component={WelcomeScreen} options={{headerShown: false}}/>
-                <Stack.Screen name="SignInScreen" component={SignInScreen} options={{headerShown: false}}/>
-                <Stack.Screen name="HomeScreen" component={HomeScreen}/>
+            <Stack.Navigator initialRouteName="WelcomeScreen">
+                <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} options={ScreenOptions}/>
+                <Stack.Screen name="SignInScreen" component={SignInScreen} options={ScreenOptions}/>
+                <Stack.Screen name="HomeScreen" component={HomeScreen} options={ScreenOptions}/>
             </Stack.Navigator>
         </NavigationContainer>
     )
