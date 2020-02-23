@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
+import NavigationContainer from './navigation/Router';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style = {styles.text}>Beep App</Text>
+      <NavigationContainer/>
     </View>
   );
 }
@@ -12,12 +12,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    fontSize: 30,
-    fontWeight: '600'
+    backgroundColor: '#fff'
   }
 });
