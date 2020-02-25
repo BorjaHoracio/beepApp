@@ -5,5 +5,5 @@ import { ApplicationStyles } from 'beep/app/styles';
 export default StyleSheet.create({
 	...ApplicationStyles.screen,
 	// ...ApplicationStyles.flexBox,
-	// ...ApplicationStyles.margins,
+	...ApplicationStyles.margins,
 });

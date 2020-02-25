@@ -14,10 +14,16 @@ export default StyleSheet.create({
 	textInput:{
 		borderWidth: 1,
 		height: 46,
-		borderRadius: 5,
-		borderColor: Colors.gray,
+		borderRadius: 23,
 		marginTop: 10,
-		paddingHorizontal: Metrics.smallMargin,
+		paddingHorizontal: Metrics.baseMargin,
 		fontSize: Fonts.size.subtitle
+	},
+	enabledInput: {
+		borderColor: Colors.purple,
+		
+	},
+	disabledInput: {
+		borderColor: Colors.gray,
 	}
 });

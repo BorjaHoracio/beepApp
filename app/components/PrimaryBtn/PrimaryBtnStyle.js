@@ -7,8 +7,13 @@ export default StyleSheet.create({
 	...ApplicationStyles.flexBox,
 	// ...ApplicationStyles.margins,
 	button: {
-		backgroundColor: Colors.purple,
 		borderRadius: 28,
 		height: 56,
+	},
+	enabled: {
+		backgroundColor: Colors.purple,
+	},
+	disabled: {
+		backgroundColor: Colors.gray,
 	}
 });

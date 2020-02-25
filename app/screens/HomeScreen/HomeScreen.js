@@ -12,10 +12,10 @@ import PrimaryBtn from 'beep/app/components/PrimaryBtn';
 import BeepsContainer from 'beep/app/containers/BeepsContainer';
 
 export default function HomeScreen ({route, navigation}) {
-	let [user, setUser] = useState('asd');
+	let [user, setUser] = useState('');
 	let [data, setData] = useState([{
 		id: 1,
-		title: 'me',
+		title: 'Loquillo',
 		subtitle: '2020-02-22T21:21:35-06:00' }
 	]);
 
@@ -31,10 +31,10 @@ export default function HomeScreen ({route, navigation}) {
 
 
 	useEffect(() => {
-		if(route.params?.text){
-			setUser(route.params.text)
+		if(route.params?.username){
+			setUser(route.params.username)
 		}
-	}, [route.params?.text]);
+	}, [route.params?.username]);
 
 	return (
 		<View style={[styles.main, styles.baseHorizontalPadding]}>

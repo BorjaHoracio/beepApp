@@ -12,8 +12,9 @@ export default function PrimaryBtn (props) {
 		<TouchableOpacity
 			onPress={props.onPress}
 			activeOpacity={0.8}
+			disabled={props.disabled} 
 		>
-			<View style={[styles.button, styles.centerObjects]}>
+			<View style={[styles.button, (props.disabled? styles.disabled : styles.enabled), styles.centerObjects]}>
 				<CustomText 
 					text={props.text}
 					color='white'

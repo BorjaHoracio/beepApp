@@ -9,7 +9,7 @@ import CustomText from 'beep/app/components/CustomText';
 
 export default function BeepCard ({title, subtitle}) {
 	return (
-		<View style={styles.card}>
+		<View style={[styles.card, styles.tinyHorizontalMargin]}>
 			<CustomText 
 				text={title}
 				size='subtitle'

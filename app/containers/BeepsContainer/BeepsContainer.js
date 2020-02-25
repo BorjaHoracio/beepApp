@@ -15,6 +15,7 @@ export default function BeepsContainer ({data, footer}) {
 				subtitle={moment(item.subtitle).fromNow()}
 			/>
 	}
+
 	return (
 		<FlatList
 			data={data}
