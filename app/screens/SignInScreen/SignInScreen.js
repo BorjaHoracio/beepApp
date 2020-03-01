@@ -1,5 +1,5 @@
 import React, { 
-	// useEffect, 
+	useEffect, 
 	useState 
 } from 'react';
 import { Keyboard, KeyboardAvoidingView, TouchableWithoutFeedback, View, TextInput } from 'react-native';
@@ -9,7 +9,17 @@ import CustomText from 'beep/app/components/CustomText';
 import PrimaryBtn from 'beep/app/components/PrimaryBtn';
 
 export default function SignInScreen (props) {
-	const [username, setUsername] = useState('');
+	const [user, setUser] = useState({
+		username: '',
+		userId: ''
+	});
+	useEffect(()=>{
+		setUser( data => ({...data, userId: String('_' + Math.random().toString(36).substr(2, 9))}))
+	},[]);
+
+	function handleSignIn (){
+		props.navigation.navigate('HomeScreen', {user})
+	}
 
 	return (
 		<TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
@@ -35,17 +45,17 @@ export default function SignInScreen (props) {
 						/>
 					</View>
 					<TextInput
-						value={username}
-						onChangeText={(username) => setUsername(username)}
+						value={user.username}
+						onChangeText={(username) => setUser(data => ({...data, username}))}
 						placeholder='Escribe tu nombre'
-						style={[styles.textInput, (username.length > 0 ? styles.enabledInput : styles.disabledInput)]} 
-						onSubmitEditing={() =>props.navigation.navigate('HomeScreen', {username})}
+						style={[styles.textInput, (user.username.length > 0 ? styles.enabledInput : styles.disabledInput)]} 
+						onSubmitEditing={() => handleSignIn()}
 					/>
 				</View>
 				<View style={[styles.buttonBottom]}>
 					<PrimaryBtn
-						disabled={!username.length>0}
-						onPress={() => props.navigation.navigate('HomeScreen', {username})}
+						disabled={!user.username.length>0}
+						onPress={() => handleSignIn()}
 						text='COMENZAR'
 					/>
 				</View>

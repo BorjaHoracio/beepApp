@@ -34,6 +34,7 @@ const ApplicationStyles = {
 			shadowOffset: { width: 0, height: 3 },
 			elevation: 3,
 			borderRadius: 5,
+			zIndex: -9,
 		},
 		absolute: {
 			position: 'absolute'
