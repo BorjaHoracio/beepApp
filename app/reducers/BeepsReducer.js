@@ -69,7 +69,13 @@ export default function BeepsReducer (state = initialState, action) {
 
 		case RESET_BEEPS: {
 			return {
-				...initialState
+				...initialState,
+				byId: {},
+				allIds: [],
+				isLoading: false,
+				offset: 0,
+				limit: PAGE_SIZE,
+				endReached: false
 			}
 		}
 
