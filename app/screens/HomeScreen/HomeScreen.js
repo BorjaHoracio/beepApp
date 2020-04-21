@@ -15,7 +15,9 @@ import { Feather } from '@expo/vector-icons';
 export default function HomeScreen ({route, navigation}) {
 	const dispatch = useDispatch();
 	let [user, setUser] = useState({});
+
 	let [showTuturial, setShowTutorial] = useState(true); 
+	
 	useEffect(() => {
 		if(route.params?.user){
 			setUser(route.params.user)

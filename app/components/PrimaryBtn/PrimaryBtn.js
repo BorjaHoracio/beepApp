@@ -15,7 +15,7 @@ export default function PrimaryBtn (props) {
 			disabled={props.disabled} 
 		>
 			<View style={[styles.button, (props.disabled? styles.disabled : styles.enabled), styles.centerObjects]}>
-				<CustomText 
+				<CustomText
 					text={props.text}
 					color='white'
 					weight='bold'
